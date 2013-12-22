@@ -5,7 +5,7 @@
 app = module.parent.exports.app;
 
 /* require your controllers here */
-var todoController = require('./controllers/todo');
+var todoController = require('./controllers/todoController');
 
 app.get('/todo', todoController.home);
 app.post('/todo/ajouter/', todoController.add);
