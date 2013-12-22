@@ -8,8 +8,8 @@ app = module.parent.exports.app;
 var todoController = require('./controllers/todoController');
 
 app.get('/todo', todoController.home);
-app.post('/todo/ajouter/', todoController.add);
-app.get('/todo/supprimer/:id', todoController.delete);
+app.post('/todo/add/', todoController.add);
+app.get('/todo/delete/:id', todoController.delete);
 app.use(function(req, res, next){
     res.redirect('/todo');
 });
