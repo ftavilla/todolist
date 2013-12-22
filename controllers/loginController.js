@@ -8,3 +8,9 @@ exports.login = function(req, res) {
     console.log(req.session.username);
     res.redirect('/todo');
 };
+
+exports.logoff = function(req, res) {
+    req.session.loggedIn = false;
+    console.log(req.session.username);
+    res.redirect('/portal');
+};
